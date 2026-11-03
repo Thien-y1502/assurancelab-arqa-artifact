@@ -1,0 +1,181 @@
+{
+  "assertions": [
+    "availability",
+    "backup",
+    "access"
+  ],
+  "baseline_separation_split_assertions": true,
+  "candidate": "ARQA",
+  "claim_state": "BOUNDED_LOCAL_MULTI_ASSERTION_PASS",
+  "declared_max_compromised_domains": 1,
+  "docker": "NOT_TESTED",
+  "enterprise_validity": "NOT_TESTED",
+  "environment": {
+    "docker": {
+      "server": "29.9.2",
+      "status": "AVAILABLE"
+    },
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "episodes_per_seed": 1000,
+  "finite_proof_audit": {
+    "finite_cut_audit_pass": true,
+    "model_safety_cases": 6,
+    "model_safety_pass": true,
+    "pass_support_violations": [],
+    "support_state_rows": 32768
+  },
+  "methods": {
+    "arqa": {
+      "in_model_false_pass_ci": [
+        2.168404344971009e-19,
+        0.002044589128401138
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "split_assertion_false_pass_ci": [
+        0.0,
+        0.006108787464328854
+      ],
+      "split_assertion_false_pass_rate": 0.0,
+      "true_pass_ci": [
+        0.9969362483640418,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "global_domain_majority": {
+      "in_model_false_pass_ci": [
+        0.31235581354011926,
+        0.3549923828360145
+      ],
+      "in_model_false_pass_rate": 0.3333333333333333,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "split_assertion_false_pass_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "split_assertion_false_pass_rate": 1.0,
+      "true_pass_ci": [
+        0.9969362483640418,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "naive_q3": {
+      "in_model_false_pass_ci": [
+        0.6450076171639855,
+        0.6876441864598807
+      ],
+      "in_model_false_pass_rate": 0.6666666666666666,
+      "n": 5000,
+      "out_of_model_abstention": 0.0,
+      "out_of_model_abstention_ci": [
+        0.0,
+        0.006108787464328854
+      ],
+      "signature_failure_not_counted": true,
+      "split_assertion_false_pass_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "split_assertion_false_pass_rate": 1.0,
+      "true_pass_ci": [
+        0.9969362483640418,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "per_assertion_domain_majority": {
+      "in_model_false_pass_ci": [
+        2.168404344971009e-19,
+        0.002044589128401138
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "split_assertion_false_pass_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "split_assertion_false_pass_rate": 1.0,
+      "true_pass_ci": [
+        0.9969362483640418,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "source_majority": {
+      "in_model_false_pass_ci": [
+        0.31235581354011926,
+        0.3549923828360145
+      ],
+      "in_model_false_pass_rate": 0.3333333333333333,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "split_assertion_false_pass_ci": [
+        0.9938912125356713,
+        1.0
+      ],
+      "split_assertion_false_pass_rate": 1.0,
+      "true_pass_ci": [
+        0.9969362483640418,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    }
+  },
+  "next_gate": "independent implementation of cut-set checker, external multi-assertion adjudication, and independent-host validation",
+  "novelty": "NOT_PROVEN",
+  "prior_result": "results_v2.json",
+  "quorum_domains": 3,
+  "seeds": [
+    701,
+    709,
+    719,
+    727,
+    733
+  ],
+  "status": "PASS",
+  "topologies": {
+    "balanced": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "fanout": [
+      20,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "version": "v3-multi-assertion"
+}

@@ -1,0 +1,23 @@
+{
+  "candidate": "ARQA",
+  "version": "2026-11-03-redesign-v2",
+  "reason_for_redesign": "The balanced v1 topology did not separate ARQA from source-majority; v2 adds a preregistered heterogeneous fan-out topology to test correlation robustness.",
+  "seeds": [601, 613, 617, 619, 631],
+  "episodes_per_seed": 1000,
+  "topologies": [
+    {"name": "balanced", "sources_per_domain": [3, 3, 3, 3, 3]},
+    {"name": "fanout", "sources_per_domain": [20, 1, 1, 1, 1]}
+  ],
+  "declared_max_compromised_domains": 1,
+  "quorum_domains": 3,
+  "primary_metrics": ["false_pass_rate_in_model", "true_pass_coverage", "baseline_separation_fanout"],
+  "negative_controls": ["two_compromised_domains", "tampered_signature"],
+  "success_rule": {
+    "arqa_false_pass_rate_in_model": "0.0",
+    "arqa_true_pass_coverage": ">= 0.70",
+    "source_majority_false_pass_rate_on_fanout": "> 0.0",
+    "arqa_false_pass_rate_on_fanout": "0.0"
+  },
+  "docker": "NOT_TESTED_DAEMON_UNAVAILABLE",
+  "enterprise_claim": "NOT_TESTED"
+}

@@ -1,0 +1,28 @@
+{
+  "candidate": "ARQA",
+  "version": "2026-11-03-pre-registered-v1",
+  "research_question": "Can a fault-domain-aware quorum decision prevent false PASS under correlated source compromise while retaining positive-case availability?",
+  "primary_metrics": [
+    "false_pass_rate_in_model",
+    "true_pass_coverage",
+    "out_of_model_abstention"
+  ],
+  "secondary_metrics": ["conflict_rate", "unknown_rate", "signature_validation_rate", "decision_latency_units"],
+  "seeds": [101, 211, 307, 401, 503],
+  "episodes_per_seed": 1000,
+  "topology": {"domains": 5, "sources_per_domain": 3, "declared_max_compromised_domains": 1, "quorum_domains": 3},
+  "baselines": ["source_majority", "naive_q3", "domain_majority", "dempster_like"],
+  "falsifiers": [
+    "arqa_false_pass_rate_in_model_above_zero",
+    "arqa_true_pass_coverage_below_0.70",
+    "arqa_passes_when_support_is_from_fewer_than_three_domains",
+    "signature_failure_is_treated_as_truth"
+  ],
+  "success_rule": {
+    "false_pass_rate_in_model": "0.0",
+    "true_pass_coverage": ">= 0.70",
+    "out_of_model_abstention": ">= 0.95"
+  },
+  "docker": "required_for_multi-process_reproduction_but_unavailable_at_execution_time",
+  "enterprise_claim": "NOT_TESTED"
+}

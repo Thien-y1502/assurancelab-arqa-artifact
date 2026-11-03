@@ -1,0 +1,38 @@
+{
+  "candidate": "ARQA",
+  "version": "2026-11-03-multi-assertion-v3",
+  "research_question": "Does requiring one common quorum cut across every required assertion prevent cross-assertion split false PASS under correlated evidence?",
+  "repair_reason": "v2 exposed parity between ARQA and a domain-majority comparator on a single boolean assertion. v3 retains v2 and adds a preregistered multi-assertion coherence benchmark rather than changing the decision threshold.",
+  "seeds": [701, 709, 719, 727, 733],
+  "episodes_per_seed": 1000,
+  "assertions": ["availability", "backup", "access"],
+  "topologies": [
+    {"name": "balanced", "sources_per_domain": [3, 3, 3, 3, 3]},
+    {"name": "fanout", "sources_per_domain": [20, 1, 1, 1, 1]}
+  ],
+  "declared_max_compromised_domains": 1,
+  "quorum_domains": 3,
+  "negative_controls": [
+    "two_compromised_domains",
+    "tampered_signature",
+    "cross_assertion_split",
+    "missing_assertion"
+  ],
+  "primary_metrics": [
+    "in_model_false_pass_rate",
+    "true_pass_coverage",
+    "split_assertion_false_pass_rate",
+    "baseline_separation_split_assertions"
+  ],
+  "success_rule": {
+    "arqa_in_model_false_pass_rate": "0.0",
+    "arqa_true_pass_coverage": ">= 0.70",
+    "arqa_split_assertion_false_pass_rate": "0.0",
+    "per_assertion_domain_majority_split_false_pass_rate": "> 0.0",
+    "finite_cut_audit": "pass",
+    "signature_tamper_not_counted": "true"
+  },
+  "claim_boundary": "bounded synthetic multi-assertion coherence and correlation benchmark; no enterprise, hardware-root, cross-host, or general-theorem claim",
+  "docker": "required_for_archive_replay",
+  "enterprise_claim": "NOT_TESTED"
+}

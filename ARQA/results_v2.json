@@ -1,0 +1,154 @@
+{
+  "baseline_separation_fanout": true,
+  "candidate": "ARQA",
+  "claim_state": "BOUNDED_LOCAL_QUORUM_CONDITIONAL_PASS_DOMAIN_BASELINE_PARITY",
+  "docker": "NOT_TESTED",
+  "domain_majority_parity": true,
+  "enterprise_validity": "NOT_TESTED",
+  "environment": {
+    "docker": {
+      "server": "29.9.2",
+      "status": "AVAILABLE"
+    },
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "episodes_per_seed": 1000,
+  "finite_proof_audit": {
+    "finite_cut_audit_pass": true,
+    "model_cases": 6,
+    "model_safety_pass": true,
+    "pass_support_violations": []
+  },
+  "methods": {
+    "arqa": {
+      "fanout_false_pass_ci": [
+        0.0,
+        0.004579481355266745
+      ],
+      "fanout_false_pass_rate": 0.0,
+      "in_model_false_pass_ci": [
+        0.0,
+        0.002294995622465121
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "dempster_like": {
+      "fanout_false_pass_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "fanout_false_pass_rate": 1.0,
+      "in_model_false_pass_ci": [
+        0.47604694371032624,
+        0.5239530562896738
+      ],
+      "in_model_false_pass_rate": 0.5,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "domain_majority": {
+      "fanout_false_pass_ci": [
+        0.0,
+        0.004579481355266745
+      ],
+      "fanout_false_pass_rate": 0.0,
+      "in_model_false_pass_ci": [
+        0.0,
+        0.002294995622465121
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "naive_q3": {
+      "fanout_false_pass_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "fanout_false_pass_rate": 1.0,
+      "in_model_false_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "in_model_false_pass_rate": 1.0,
+      "n": 5000,
+      "out_of_model_abstention": 0.0,
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "source_majority": {
+      "fanout_false_pass_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "fanout_false_pass_rate": 1.0,
+      "in_model_false_pass_ci": [
+        0.47604694371032624,
+        0.5239530562896738
+      ],
+      "in_model_false_pass_rate": 0.5,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    }
+  },
+  "next_gate": "Docker multi-process replay, correlated fault model proof, and independent host validation",
+  "novelty": "NOT_PROVEN",
+  "seeds": [
+    601,
+    613,
+    617,
+    619,
+    631
+  ],
+  "status": "CONDITIONAL_PASS",
+  "topologies": {
+    "balanced": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "fanout": [
+      20,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "v1_result": "results_v1.json",
+  "version": "v2"
+}

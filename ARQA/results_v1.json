@@ -1,0 +1,136 @@
+{
+  "candidate": "ARQA",
+  "claim_state": "BOUNDED_LOCAL_QUORUM_PASS",
+  "docker": "NOT_TESTED",
+  "enterprise_validity": "NOT_TESTED",
+  "environment": {
+    "docker": {
+      "status": "NOT_AVAILABLE",
+      "stderr": "failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified."
+    },
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "episodes_per_seed": 1000,
+  "finite_proof_audit": {
+    "finite_cut_audit_pass": true,
+    "model_safety_cases": 6,
+    "model_safety_pass": true,
+    "pass_support_violations": [],
+    "quorum_domains": 3
+  },
+  "methods": {
+    "arqa": {
+      "in_model_false_pass_ci": [
+        0.0,
+        0.004579481355266745
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "dempster_like": {
+      "in_model_false_pass_ci": [
+        0.0,
+        0.004579481355266745
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "domain_majority": {
+      "in_model_false_pass_ci": [
+        0.0,
+        0.004579481355266745
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "naive_q3": {
+      "in_model_false_pass_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "in_model_false_pass_rate": 1.0,
+      "n": 5000,
+      "out_of_model_abstention": 0.0,
+      "out_of_model_abstention_ci": [
+        0.0,
+        0.004579481355266745
+      ],
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    },
+    "source_majority": {
+      "in_model_false_pass_ci": [
+        0.0,
+        0.004579481355266745
+      ],
+      "in_model_false_pass_rate": 0.0,
+      "n": 5000,
+      "out_of_model_abstention": 1.0,
+      "out_of_model_abstention_ci": [
+        0.9954205186447334,
+        1.0
+      ],
+      "signature_failure_not_counted": true,
+      "true_pass_ci": [
+        0.9977050043775348,
+        1.0
+      ],
+      "true_pass_coverage": 1.0
+    }
+  },
+  "next_gate": "Docker multi-process replay, correlated fault model proof, and independent host validation",
+  "novelty": "NOT_PROVEN",
+  "seeds": [
+    101,
+    211,
+    307,
+    401,
+    503
+  ],
+  "status": "PASS",
+  "topology": {
+    "declared_max_fault_domains": 1,
+    "domains": 5,
+    "quorum_domains": 3,
+    "sources_per_domain": 3
+  }
+}
